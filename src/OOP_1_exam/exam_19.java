@@ -28,16 +28,20 @@ class MyTv {
 		
 	}
 	void channelUp() {
-		this.channel= ++channel;
-		if(channel==MAX_CHANNEL+1) {
+	
+		if(channel==MAX_CHANNEL) {
 			channel = MIN_CHANNEL;
+		}else {
+			this.channel = channel+1;
 		}
 		
 	}
 	void channelDown() {
-		this.channel = --channel;
+		
 		if(channel==MIN_CHANNEL) {
 			channel = MAX_CHANNEL;
+		}else {
+			this.channel = channel-1;
 		}
 		
 	}
